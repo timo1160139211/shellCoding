@@ -1,5 +1,11 @@
 #! /bin/bash
 # 0 1 true or not example :
+# 
+#    The conclusion is :
+#       1. each expression will return a value between 0 and 255.
+#       2. the state value 0 means that the expression finished fluently.
+#       3. others state values means expression exit with an exception.
+
 
 # 测试 if 判断语句
 if [ 1 ];then
