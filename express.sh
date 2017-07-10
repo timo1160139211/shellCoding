@@ -6,6 +6,8 @@
 #     	2."" 和 '' 做 括号()用
 #     	3.单独的 * < > & | 字符的，需要环绕 "" ''或者加转意字符 \
 #	4.
+#       5.learn how to get the return value from expr : use ` `.
+
 
 
 #--------- expr ----------#
@@ -55,4 +57,9 @@ echo $s0
 
 echo $(((2 +3)*4))
 #20
+
+#learn how to get the return value from expr:
+s=`expr 5 + 7`
+echo $s
+
 
