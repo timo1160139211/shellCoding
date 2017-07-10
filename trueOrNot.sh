@@ -31,4 +31,8 @@ echo $?
 
 
 
+# test the exit status :
+exitValue=66
+echo "The exit status is : $exitValue "
+exit $exitValue
 
