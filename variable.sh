@@ -26,9 +26,14 @@ echo "quoted values : $@"
 #  $? 返回上一个命令/函数执行的状态返回码
 echo "last return state value is $?"
 
-#  $$
+#  $$ 本身pid
 echo "pid is $$"
 
+#  $! 最后运行的后台pid
+echo "background pid is $!"
+
+#  $- 列出 Set 命令设定的Flag
+echo "Flag : $-"
 
 
 ########### The diffence between $* and $@. ##################
