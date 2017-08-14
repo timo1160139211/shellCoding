@@ -4,7 +4,7 @@
 ################ function define #############
 
 function dot {
-  INTERVAL=1
+  local INTERVAL=1
   while true
   do
 	echo -e ".\c"
@@ -13,8 +13,8 @@ function dot {
 }
 
 function rotate {
-  INTERVAL=1       # time to sleep
-  TCOUNT=0         # loop control
+  local INTERVAL=1       # time to sleep
+  local TCOUNT=0         # loop control
 
   while :     #loop forever
   do
