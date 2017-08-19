@@ -40,18 +40,32 @@ function returnStr {
     echo "\"Hi,${name}.\""
 }	
 
+function testVar {
+    echo "I am testvar , \$1 is $1"
+}
+
+function testArray {
+    local newArray
+    newArray=(`echo $*`)
+
+    for (( i = 0; i < $# ; i++ )) {
+        newArray[$i]+=$i          
+    }   
+
+    echo "I am testarray , \$@ is ${newArray[*]}"
+}
 
 ######################################
 #            Start Main              #
 ######################################
 
-#hello
+hello
 
-#sayHello Tom
+sayHello Tom
 
-#sayHi Jerry
+sayHi Jerry
 
-#echo " "
+echo " "
 return259
 echo "my exit state is $?"
 
@@ -61,4 +75,15 @@ returnStr
 echo " "
 result=`returnStr`
 echo -e "函数的返回值：\n$result"
+
+testVar 0
+
+array=(a a a a)
+testArray ${array[*]}
+
+echo "===== Current \$0 File is $0 ====="
+. ./funLib.sh   #or source ./funLib.sh  
+
+sum 1 2 3 4
+
 
